@@ -14,11 +14,17 @@ export default class RESTyContainer extends Component {
   }
 
   handleChange = (event) => {
-
+    this.setState({ [event.target.name]: event.target.value });
   }
 
-  handleSubmit = (event) => {
-    
+  handleSubmit = async (event) => {
+    event.preventDefault();
+    const response = await restyCalls(
+      this.state.url, 
+      this.state.method, 
+      this.state.display
+    );
+    this.setState({ display: response });
   }
 
   render() {
