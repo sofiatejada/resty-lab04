@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 export default function Controls({ 
   data,
-  method,
   url,
   handleChange, 
   handleSubmit }) {
@@ -21,7 +20,8 @@ export default function Controls({
       <section>
         <label htmlFor="GET">
           GET
-          <input id="GET" value="GET" name="method" type="radio" 
+          <input 
+            aria-label="GET" id="GET" value="GET" name="method" type="radio" 
             onChange={handleChange}/>
         </label>
 
@@ -57,7 +57,6 @@ export default function Controls({
 
 Controls.propTypes = {
   data: PropTypes.string,
-  method: PropTypes.string,
   url: PropTypes.string,
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
