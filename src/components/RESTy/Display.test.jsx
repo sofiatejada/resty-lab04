@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import Display from './Display';
 
 describe('display', () => {
-  it.skip('renders display', () => {
+  it('renders display', () => {
     const hola = {
       'Hola': 'Rock, Paper, REST!'
     };

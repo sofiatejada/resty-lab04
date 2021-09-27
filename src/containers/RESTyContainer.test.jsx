@@ -4,7 +4,7 @@ import RESTyContainer from './RESTyContainer';
 import userEvent from '@testing-library/user-event';
 
 describe('container', () => {
-  it.skip('fetches stuff', async () => {
+  it('fetches stuff', async () => {
     render(
       <RESTyContainer />
     );
@@ -27,4 +27,3 @@ describe('container', () => {
     });
   });
 });
-
