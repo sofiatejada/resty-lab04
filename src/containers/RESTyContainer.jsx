@@ -28,11 +28,13 @@ export default class RESTyContainer extends Component {
   }
 
   render() {
-    const { data, display } = this.state;
+    const { data, method, url, display } = this.state;
     return (
       <div>
         <Header />
         <Controls 
+          method={method}
+          url={url}
           data={data}
           handleChange={this.handleChange} 
           handleSubmit={this.handleSubmit} />

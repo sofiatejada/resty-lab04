@@ -3,15 +3,19 @@ import PropTypes from 'prop-types';
 
 export default function Controls({ 
   data,
+  method,
+  url,
   handleChange, 
   handleSubmit }) {
   return (
-    <form onChange={handleChange} onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
 
       <input 
+        name="url"
         aria-label="url" 
         placeholder="URL" 
-        type="text" 
+        type="url"
+        value={url}
         onChange={handleChange} />
 
       <section>
@@ -45,6 +49,7 @@ export default function Controls({
         aria-label="data" 
         name="data"
         value={data}
+        onChange={handleChange}
         placeholder="JSON Body" />
     </form>
   );
@@ -52,6 +57,8 @@ export default function Controls({
 
 Controls.propTypes = {
   data: PropTypes.string,
+  method: PropTypes.string,
+  url: PropTypes.string,
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 };

@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactJson from 'react-json-view';
 
-export default function Display({ display }) {
+export default function Display(response) {
   return (
     <div aria-label="res" role="stuff">
-      <ReactJson src={display} />
+      <ReactJson src={response} />
     </div>
   );
 }
