@@ -1,48 +1,57 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Controls({ handleChange, handleSubmit }) {
+export default function Controls({ 
+  data,
+  handleChange, 
+  handleSubmit }) {
   return (
     <form onChange={handleChange} onSubmit={handleSubmit}>
 
-      <input aria-label="url" placeholder="URL" type="text" />
+      <input 
+        aria-label="url" 
+        placeholder="URL" 
+        type="text" 
+        onChange={handleChange} />
 
       <section>
-
         <label htmlFor="GET">
           GET
-          <input id="get" value="GET" name="method" type="radio" />
+          <input id="GET" value="GET" name="method" type="radio" 
+            onChange={handleChange}/>
         </label>
 
         <label htmlFor="POST">
           POST
-          <input id="post" value="POST" name="method" type="radio" />
+          <input id="POST" value="POST" name="method" type="radio" 
+            onChange={handleChange}/>
         </label>
 
         <label htmlFor="PUT">
           PUT
-          <input id="put" value="PUT" name="method" type="radio" />
+          <input id="PUT" value="PUT" name="method" type="radio" 
+            onChange={handleChange}/>
         </label>
 
         <label htmlFor="DELETE">
           DELETE
-          <input id="delete" value="DELETE" name="method" type="radio" />
+          <input id="DELETE" value="DELETE" name="method" type="radio"
+            onChange={handleChange} />
         </label>
 
         <button aria-label="submit-button">Submit</button>
       </section>
-
-      <section>
-
-        <textarea aria-label="data" name="data" placeholder="JSON Body" />
-
-      </section>
-
+      <textarea 
+        aria-label="data" 
+        name="data"
+        value={data}
+        placeholder="JSON Body" />
     </form>
   );
 }
 
 Controls.propTypes = {
+  data: PropTypes.string,
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 };
