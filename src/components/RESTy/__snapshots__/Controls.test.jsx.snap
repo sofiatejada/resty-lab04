@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`controls displays controls 1`] = `
+<form
+  aria-label="form"
+>
+  <input
+    aria-label="url"
+    name="url"
+    placeholder="URL"
+    type="url"
+    value=""
+  />
+  <section>
+    <label
+      for="GET"
+    >
+      GET
+      <input
+        aria-label="GET"
+        id="GET"
+        name="method"
+        type="radio"
+        value="GET"
+      />
+    </label>
+    <label
+      for="POST"
+    >
+      POST
+      <input
+        id="POST"
+        name="method"
+        type="radio"
+        value="POST"
+      />
+    </label>
+    <label
+      for="PUT"
+    >
+      PUT
+      <input
+        id="PUT"
+        name="method"
+        type="radio"
+        value="PUT"
+      />
+    </label>
+    <label
+      for="DELETE"
+    >
+      DELETE
+      <input
+        id="DELETE"
+        name="method"
+        type="radio"
+        value="DELETE"
+      />
+    </label>
+    <button
+      aria-label="submit-button"
+    >
+      Submit
+    </button>
+  </section>
+  <textarea
+    aria-label="data"
+    name="data"
+    placeholder="JSON Body"
+  />
+</form>
+`;
