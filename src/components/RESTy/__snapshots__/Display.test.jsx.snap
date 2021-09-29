@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`display renders display 1`] = `
+<span
+  class="string-value"
+  style="cursor: default;"
+>
+  "
+  Rock, Paper, REST!
+  "
+</span>
+`;
